@@ -12,7 +12,7 @@ def playGame(userChoice):
     if userChoice == computerChoice:
         result = "It's a tie!"
     elif (userChoice == 'rock' and computerChoice == 'scissors') or (userChoice == 'paper' and computerChoice == 'rock') or ( userChoice == 'scissors' and computerChoice == 'paper'):
-        result = "You win!"
+        result = "You Win!"
     else:
         result = "You lose!"
 

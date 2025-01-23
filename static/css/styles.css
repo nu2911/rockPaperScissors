@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Orbitron:wght@400..900&family=Rubik+Vinyl&display=swap');
+
+:root {
+    --text: #eeedf2;
+    --background: #0e0616;
+    --accent: white;
+    --card-bg: #0e2738;
+    --shadow: rgba(134, 65, 238, 0.2);
+    --btn: #3498db;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: var(--card-bg); 
+    padding: 13px 0;
+    box-shadow: 0 0 5px #542996; 
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px; 
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+    padding: 5px 15px; 
+    border-radius: 8px; 
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+    transform: scale(1.05); 
+    background-color: #153b55; 
+}
+
+nav ul li a.active {
+    background-color: #153b55; 
+    color: var(--accent);
+    /* border-bottom: 3px solid var(--accent); */
+    
+}
+.game-container {
+    
+    margin-top: 50px;
+    margin-top: 70px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow);
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-container {
+    
+    margin-top: 62px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-container p,li{
+        text-align: justify;
+        
+}
+
+h1 {
+    color: #333;
+    font-size: 50px;
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 900;
+    font-style: normal;
+    margin: 0;
+}
+
+form button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: var(--btn);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px white, 4px 4px 4px 4px black;
+
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+form button:hover {
+    background-color: var(--btn);
+    box-shadow: 2px 2px 2px 2px rgb(218, 214, 214), 4px 4px 4px 4px black;
+}
+
+.result p {
+    font-size: 18px;
+    color: #333;
+    /* text-align: left; */
+
+    font-family: "Orbitron", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;}
+
+    /* Add responsiveness */
+@media screen and (max-width: 600px) {
+    .game-container {
+        width: 90%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    form button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    .result p {
+        font-size: 16px;
+    }
+}
+
+/* Center align buttons better */
+form .player-form {
+    margin-top: 20px;
+}

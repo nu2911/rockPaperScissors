@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block homea %}class="active"{% endblock %}
+
+{% block content %}
+
+<div class="game-container">
+    <h1>Rock Paper Scissors</h1><br>
+    
+
+    
+    {% if userChoice %}
+    <div class="result">
+        <p>User: <b>{{userWins}}</b> | Ties: <b>{{draw}}</b> | Computer: <b>{{computerWins}}</b></p>
+        <p>You chose: <b>{{userChoice}}</b></p>
+        <p>Computer chose: <b>{{computerChoice}}</b></p>
+        <p style="font-size: 22px;"><b>{{result}}</b></p>
+    </div>
+    {% endif %}
+    
+    <form action="/play" method="POST">
+        <button type="submit" name="userChoice" value="rock">rock</button>
+        <button type="submit" name="userChoice" value="paper">paper</button>
+        <button type="submit" name="userChoice" value="scissors">scissors</button>
+    </form>
+        
+    {% if userChoice %}
+    <form action="/reset" method="get">
+        <button type="submit" style="margin-left: -12px;">Reset</button>
+    </form>
+    {% endif %}
+    
+ 
+</div>
+{% endblock %}
+
